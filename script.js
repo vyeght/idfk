@@ -6,11 +6,11 @@ getAdviceButton.addEventListener('click', async () => {
     const query = userInput.value.trim();
 
     if (!query) {
-        adviceOutput.textContent = 'Please enter a query.';
+        adviceOutput.textContent = '🎅 Please enter a query to get advice! 🎄';
         return;
     }
 
-    adviceOutput.textContent = 'Fetching advice...';
+    adviceOutput.textContent = '🎁 Fetching your festive advice... 🎁';
 
     try {
         const response = await fetch('https://api.openai.com/v1/completions', {
@@ -21,15 +21,15 @@ getAdviceButton.addEventListener('click', async () => {
             },
             body: JSON.stringify({
                 model: "text-davinci-003",
-                prompt: `You are a decision-making assistant. Provide concise, actionable advice: ${query}`,
-                max_tokens: 100,
-                temperature: 0.7
+                prompt: `You are a holiday-themed decision-making assistant. Provide festive, concise, and actionable advice: ${query}`,
+                max_tokens: 150,
+                temperature: 0.8
             })
         });
-
+        
         const data = await response.json();
-        adviceOutput.textContent = data.choices[0].text.trim();
+        adviceOutput.textContent = `🎄 ${data.choices[0].text.trim()} 🎄`;
     } catch (error) {
-        adviceOutput.textContent = 'Error fetching advice. Please try again.';
+        adviceOutput.textContent = '❄️ Error fetching advice. Please check your connection or try again! ❄️';
     }
 });
