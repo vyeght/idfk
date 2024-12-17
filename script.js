@@ -2,6 +2,9 @@ const getAdviceButton = document.getElementById('getAdvice');
 const userInput = document.getElementById('userInput');
 const adviceOutput = document.getElementById('adviceOutput');
 
+// Replace with YOUR OpenAI API Key
+const OPENAI_API_KEY = "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";
+
 getAdviceButton.addEventListener('click', async () => {
     const query = userInput.value.trim();
 
@@ -17,7 +20,7 @@ getAdviceButton.addEventListener('click', async () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer your_openai_api_key`
+                'Authorization': `Bearer ${OPENAI_API_KEY}`
             },
             body: JSON.stringify({
                 model: "text-davinci-003",
@@ -26,10 +29,11 @@ getAdviceButton.addEventListener('click', async () => {
                 temperature: 0.8
             })
         });
-        
+
         const data = await response.json();
         adviceOutput.textContent = `🎄 ${data.choices[0].text.trim()} 🎄`;
     } catch (error) {
+        console.error("Error fetching advice:", error);
         adviceOutput.textContent = '❄️ Error fetching advice. Please check your connection or try again! ❄️';
     }
 });
