@@ -7,22 +7,22 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(120deg, #ffafbd, #ffc3a0);
-    background-image: url('https://www.transparenttextures.com/patterns/holiday-background.png');
-    color: #ffffff;
+    background: linear-gradient(120deg, #ff7f50, #ffcccb);
+    color: #333; /* Updated for better readability */
     overflow: hidden;
     position: relative;
 }
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 600px;
     z-index: 10;
+    color: #333; /* Ensures text is always visible */
 }
 
 textarea {
@@ -65,7 +65,7 @@ button:hover {
 footer {
     margin-top: 20px;
     font-size: 14px;
-    color: #333;
+    color: #444; /* Ensures footer text visibility */
     opacity: 0.8;
 }
 
