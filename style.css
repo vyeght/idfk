@@ -8,7 +8,8 @@ body {
     flex-direction: column;
     height: 100vh;
     background: linear-gradient(120deg, #ff7f50, #ffcccb);
-    color: #333; /* Updated for better readability */
+    background-image: url('https://www.transparenttextures.com/patterns/holiday-background.png');
+    color: #333; /* Ensures readability */
     overflow: hidden;
     position: relative;
 }
@@ -22,7 +23,7 @@ body {
     width: 90%;
     max-width: 600px;
     z-index: 10;
-    color: #333; /* Ensures text is always visible */
+    color: #333; /* Ensures text visibility */
 }
 
 textarea {
