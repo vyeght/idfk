@@ -21,7 +21,7 @@ const festiveResponses = [
     "🎅 Believe in magic—it’s always the answer! 🎄",
     "🎁 A little hot cocoa and some faith will guide you! ☕",
     "❄️ Pick the path that sparkles the most! ✨",
-    "🎄 Joy is the answer—always go with joy! 🎉",
+    "🎄 You on the naughty list homie I ain't tellin' you shit! 🎉",
     "🎅 Be as bold as Rudolph’s red nose! 🦌",
     "🎁 Life is short, so go for the extra sprinkles! 🍪",
     "❄️ Cozy up to the idea that feels warmest. 🔥",
